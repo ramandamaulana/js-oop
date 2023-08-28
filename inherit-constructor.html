@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // constructor function with params
+        function Person(firstName){
+            this.firstName = firstName;
+            // this.lastName = lastName,
+            this.getFullName = function(name){
+                console.log(`Hello ${name}, saya adalah ${this.firstName}`)
+            }
+        }
+
+        function Role(firstName,lastName){
+            this.lastName = lastName,
+            // Interhiten
+            Person.call(this, firstName)
+        }
+        //object instance
+        const riski = new Role('riski','gaming');
+        // riski.firstName = 'budi';
+        // riski.lastName = ' tabuti';
+     console.log(riski)
+        
+    </script>
+</body>
+</html>
