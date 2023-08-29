@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Mahasiswa{
+                jurusan(){
+                    console.log('Teknik informatika')
+                }
+        }
+
+        class Universitas extends Mahasiswa{
+            jurusan(){
+                // memanggil Method/function dari parents menggunakan supper method
+                super.jurusan()
+                console.log('Teknik Mesin')
+                // super(jurusan);
+
+            }
+        }
+        // const meta = new Mahasiswa();
+        // meta.jurusan()
+        // console.log(meta);
+        const universitas = new Universitas();
+        universitas.jurusan()
+        console.log(universitas);
+    </script>
+</body>
+
+</html>

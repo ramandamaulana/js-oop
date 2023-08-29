@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            class Person {
+                constructor(name) {
+                 this.name = name;
+                 }
+                  sayRole() {
+                console.log(`Halo, nama saya ${this.name}`);
+                 }
+                }
+
+class Role extends Person {
+    constructor(name, role) {
+        // wajib digunakan bila ingin menggunakan 2 constructor yang diwariskan oleh parents Person
+        super(name);
+        this.role = role;
+    }
+
+    sayRole() {
+        console.log(`Halo, nama saya ${this.name}, saya seorang ${this.role}`);
+    }
+}
+
+const abu = new Role('Ramanda', 'Software Engineer');
+abu.sayRole();
+console.log(abu)
+
+const budi = new Person('Budi');
+budi.sayRole();
+
+        // class Person{
+        //     constructor(name){
+        //         this.name = name;
+        //         // this.role = role;
+        //     }
+        //     sayRole(name){
+        //         console.log(`katakan halo  ${name} anda adalah seorang ${this.lastname}`)
+        //     }
+        // }
+
+        // class role extends Person{
+        //     constructor(name,lastname){
+        //         super(name);
+        //         this.lastname = lastname;
+        //     }
+
+        //     sayRole(name){
+        //         console.log(`katakan halo  ${name} anda adalah seorang ${this.lastname}`)
+        //     }
+        // }
+
+        // const abu = new Person('ramanda','Software Engineer','kelas : 1')
+        // abu.sayRole('joko')
+        // console.log(abu)
+
+        // const budi = new Person('budi','Gamers')
+        // console.log(budi)
+    </script>
+</body>
+</html>

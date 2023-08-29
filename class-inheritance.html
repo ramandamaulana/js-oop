@@ -8,20 +8,32 @@
 <body>
     <script>
         class Person{
-            constructor(name){
-                this.name = name;
-                console.log(`hello ${name}`)
-                console.log(4 + 6)
-            }
+            // constructor(name){
+            //     this.name = name;
+            //     console.log(`hello ${name}`)
+            //     console.log(4 + 6)
+            // }
             // method in class
             sayHello(name){
                 console.log(`katakan halo pada ${name} dan pada ${this.name}`)
             }
         }
 
-        const hello = new Person('ramanda')
-        hello.sayHello('budi')
-        console.log(hello)
+        class role extends Person{
+            sayHello(name){
+                console.log(`katakan halo pada ${name} dan pada ${this.name}`)
+            }
+        }
+
+        const abu = new Person('ramanda')
+        abu.name = 'hero';
+        abu.sayHello('budi')
+        console.log(abu)
+
+        const tabuti = new Person('ramanda')
+        tabuti.name = 'tabuti';
+        tabuti.sayHello('abu')
+        console.log(tabuti)
     </script>
 </body>
 </html>

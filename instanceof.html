@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Passenger {
+    constructor(name, seatNumber) {
+        this.name = name;
+        this.seatNumber = seatNumber;
+    }
+
+    getInfo() {
+        return `Penumpang ${this.name}, Nomor Kursi ${this.seatNumber}`;
+    }
+}
+
+class Crew {
+    constructor(name, role) {
+        this.name = name;
+        this.role = role;
+    }
+
+    getInfo() {
+        return `Kru ${this.role}: ${this.name}`;
+    }
+}
+
+const passenger1 = new Passenger('John Doe', 'A12');
+const crew1 = new Crew('Jane Smith', 'Pramugari');
+
+console.log(passenger1 instanceof Passenger); // Output: true
+console.log(crew1 instanceof Crew);           // Output: true
+console.log(passenger1 instanceof Crew);      // Output: false
+
+const passengers = [passenger1];
+const crewMembers = [crew1];
+
+for (const person of passengers.concat(crewMembers)) {
+    if (person instanceof Passenger) {
+        console.log(person.getInfo());
+    } else if (person instanceof Crew) {
+        console.log(person.getInfo());
+    }
+}
+
+//         class Animal {}
+// class Dog extends Animal {}
+
+// const animal = new Animal();
+// const dog = new Dog();
+
+// console.log(animal instanceof Animal); // Output: true
+// console.log(dog instanceof Dog);       // Output: true
+// console.log(dog instanceof Animal);    // Output: true
+
+    </script>
+</body>
+</html>
